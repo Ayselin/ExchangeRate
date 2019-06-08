@@ -1,0 +1,64 @@
+$teal: #b1f7e8;
+$background: darken($teal, 5%);
+$grayscale: rgb(167, 163, 163);
+$standard-border: 2px solid black;
+
+
+$screen-sm-min: 640px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1366px;
+
+@mixin standard-border {
+  border: $standard-border;
+}
+
+.container {
+  background: $background;
+  width: 100%;
+  padding: 40px;
+  margin: 0, auto;
+}
+
+.select {
+  display: block;
+  max-width: none;
+  width: 25%;
+  height: 60px;
+  border: $standard-border;
+  margin-bottom: 20px;
+  @media screen and (max-width: $screen-sm-min) {
+    width: 100%;
+  }
+  @media screen and (max-width: $screen-xl-min) {
+    width: 70%;
+  }
+}
+
+
+.currencyTable {
+  border-collapse: collapse;
+  width: 40%;
+  @media screen and (min-width: $screen-sm-min) {
+    width: 100%;
+  }
+  @media screen and (min-width: $screen-xl-min) {
+    width: 50%;
+  }
+
+  &, th, td {
+    @include standard-border;
+  }
+
+  
+  th {
+    height: 60px;
+    background-color: $grayscale;
+  }
+
+  tr {
+    &:hover {
+      background-color: $grayscale;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    background: grey;
+    padding: 1px 0;
+    height: 15vh;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+.header{
+    flex-direction: column;
+    text-decoration:none;
+    list-style-type: none;
+    display: inline-block;
+}
+.list {
+    flex-direction: column;
+    text-decoration:none;
+    list-style-type: none;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 800px) {
+    .container{
+        flex-direction: column;
+    }
+}
