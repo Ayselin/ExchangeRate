@@ -3,34 +3,6 @@ import styles from './Converter.scss'
 import CssModules from 'react-css-modules'
 import axios from 'axios'
 
-const renderContent = (loading, error, data) => {
-  if (error) return <h1>Error!</h1>
-  if (loading) return <h1>Loading!</h1>
-  if (data) {
-    return (
-      <table className={styles.currencyTable}>
-        <thead>
-          <tr>
-            <th>Currency</th>
-            <th>Rate</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            Object.keys(data.rates).map((key) => (
-              <tr className={styles.currency} key={key}>
-                <td>{key}</td>
-                <td>{data.rates[key]}</td>
-              </tr>
-            ))
-          }
-        </tbody>
-      </table>
-    )
-  }
-  return null
-}
-
 class Converter extends Component {
   constructor (props) {
     super(props)
@@ -104,7 +76,7 @@ class Converter extends Component {
                       Object.keys(data.rates).map((key) => (
                         <tr className={styles.currency} key={key}>
                           <td>{key}</td>
-                          <td>{data.rates[key]}</td>
+                          <td>{data.rates[key].toFixed(2)}</td>
                         </tr>
                       ))
                     }

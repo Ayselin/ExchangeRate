@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 //import Test from '../Test.js'
 import Header from '../Header/Header'
 import styles from './App.scss'
-import CssModules from 'react-css-modules'
 
 class App extends Component {
   render () {
@@ -26,4 +25,4 @@ class App extends Component {
   }
 }
 
-export default CssModules(App, styles)
+export default App

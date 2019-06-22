@@ -1,12 +1,15 @@
-.about {
-    width: 100%;
-    display:flex;
-    flex-flow: row wrap;
-    
+.wrapper {
+    max-width: 600px;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 .title{
     text-align: center;
 }
 .article {
-text-align: justify;
+    text-align: justify;
+    p {
+        line-height: 1.2em;
+        margin-bottom: 1.6em;
+    }
 }

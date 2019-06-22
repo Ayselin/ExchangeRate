@@ -6,6 +6,7 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 })
 
 const config = {
+  mode: 'development',
   entry: './src/index.js',
   module: {
     rules: [
@@ -45,7 +46,12 @@ const config = {
       }
     ]
   },
-  plugins: [htmlWebpackPlugin]
+  plugins: [htmlWebpackPlugin],
+  devServer: {
+    port: 8081,
+    historyApiFallback: true,
+    open: true
+  }
 }
 
 module.exports = config

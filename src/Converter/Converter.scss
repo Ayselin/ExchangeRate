@@ -1,4 +1,4 @@
-$teal: #b1f7e8;
+$teal: #d7e0de;
 $background: darken($teal, 5%);
 $grayscale: rgb(167, 163, 163);
 $standard-border: 2px solid black;
@@ -17,31 +17,22 @@ $screen-xl-min: 1366px;
   background: $background;
   width: 100%;
   padding: 40px;
-  margin: 0, auto;
+  margin: 0 auto;
 }
 
 .select {
   display: block;
   max-width: none;
-  width: 25%;
   height: 60px;
   border: $standard-border;
   margin-bottom: 20px;
-  @media screen and (max-width: $screen-sm-min) {
-    width: 100%;
-  }
-  @media screen and (max-width: $screen-xl-min) {
-    width: 70%;
-  }
+  width: 100%;
 }
 
 
 .currencyTable {
   border-collapse: collapse;
-  width: 40%;
-  @media screen and (min-width: $screen-sm-min) {
-    width: 100%;
-  }
+  width: 100%;
   @media screen and (min-width: $screen-xl-min) {
     width: 50%;
   }

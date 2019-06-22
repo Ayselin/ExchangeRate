@@ -5,7 +5,7 @@ import CSSModules from 'react-css-modules'
 const About = () => {
   return (
     <div className={styles.wrapper}>
-      <header className={styles.title}>About</header>
+      <header className={styles.title}><h1>About</h1></header>
       <article className={styles.article}>
         <p>Exchange rates are influenced by banks and trading institutions and the volume of currency they are buying and selling at any given time. Currencies are traded (bought and sold) daily around the world.</p>
 
